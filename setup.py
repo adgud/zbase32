@@ -54,10 +54,11 @@ __VERSION_LOCALS={}
 #execfile(__VERSION_FILE, __VERSION_LOCALS)
 exec(open(__VERSION_FILE).read())
 
-if '__version__' not in __VERSION_LOCALS:
-    raise RuntimeError("No __version__ defined in in %s." % __VERSION_FILE)
-
-version = str(__VERSION_LOCALS['__version__'])
+#if '__version__' not in __VERSION_LOCALS:
+#    raise RuntimeError("No __version__ defined in in %s." % __VERSION_FILE)
+#
+#version = str(__VERSION_LOCALS['__version__'])
+version = __version__
 
 # darcsver is needed only if you want "./setup.py darcsver" to write a new
 # version stamp in pyutil/_version.py, with a version number derived from
