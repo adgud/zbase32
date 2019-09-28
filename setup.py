@@ -51,7 +51,8 @@ setup_requires = []
 PKG='zbase32'
 __VERSION_FILE = os.path.join(PKG, '_version.py')
 __VERSION_LOCALS={}
-execfile(__VERSION_FILE, __VERSION_LOCALS)
+#execfile(__VERSION_FILE, __VERSION_LOCALS)
+exec(open(__VERSION_FILE).read())
 
 if '__version__' not in __VERSION_LOCALS:
     raise RuntimeError("No __version__ defined in in %s." % __VERSION_FILE)
